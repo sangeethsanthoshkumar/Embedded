@@ -1,0 +1,51 @@
+C51 COMPILER V8.02   MOTOR                                                                 07/02/2022 15:36:57 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE MOTOR
+OBJECT MODULE PLACED IN motor.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE motor.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX51.H>
+   2          main()
+   3          { 
+   4   1       int a=0;
+   5   1       P1_0=1;
+   6   1       
+   7   1       if(a==1)
+   8   1        { P1_1=1;
+   9   2          P1_2=0;
+  10   2        }
+  11   1       else
+  12   1        { P1_1=0;
+  13   2          P1_2=1;     
+  14   2        }
+  15   1       while(P1_0==0)
+  16   1       { 
+  17   2         P1_1=1;
+  18   2         P1_2=0;
+  19   2         a=1;
+  20   2       }
+  21   1      
+  22   1       while(P1_0==1)
+  23   1       { 
+  24   2         P1_1=0;
+  25   2         P1_2=1;
+  26   2       }
+  27   1      
+  28   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     41    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
